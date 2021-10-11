@@ -31,5 +31,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    & .login-container{
+        height: 250px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 2px solid red;
+    }
   }
 }

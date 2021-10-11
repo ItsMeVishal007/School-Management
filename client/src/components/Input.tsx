@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import TextField from "@mui/material/TextField";
 
-const Input = () => {
-    return (
-        <div>
-            Hello Input
-        </div>
-    )
+interface InputInterface{
+    label: string;
 }
 
-export default Input
+const Input: React.FC<InputInterface> = ({label}) => {
+  return <TextField  id='outlined-basic' label={label} variant='outlined' />;
+};
+
+export default Input;
