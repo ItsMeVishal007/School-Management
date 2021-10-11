@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 
-interface InputInterface{
-    label: string;
+interface InputInterface {
+  label: string;
+  onChange: (e: string | any) => any;
 }
 
-const Input: React.FC<InputInterface> = ({label}) => {
-  return <TextField  id='outlined-basic' label={label} variant='outlined' />;
+const Input: React.FC<InputInterface> = ({ label, onChange }) => {
+  return (
+    <TextField
+      id='outlined-basic'
+      label={label}
+      variant='outlined'
+      onChange={onChange}
+    />
+  );
 };
 
 export default Input;
