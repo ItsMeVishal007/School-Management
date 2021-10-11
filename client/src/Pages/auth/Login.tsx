@@ -15,8 +15,8 @@ const Login: React.FC = () => {
           <Typography variant='h3' component='div' gutterBottom>
             Login
           </Typography>
-          <Input label='Email' />
-          <Input label='Password' />
+          <Input onChange={(e: any)=>console.log(e.target.value)} label='Email' />
+          <Input onChange={(e: any)=>console.log(e.target.value)} label='Password' />
           <Button btnType="Primary" label="Login" onClick={()=> console.log("hello world")} />
         </div>
       </div>
