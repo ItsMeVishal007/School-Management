@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // border : 2px solid black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  & .left-Section {
+    width: 40vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  & .wallpaper {
+      height: 100%;
+    background-image: url("../../assets//images//loginWallpaper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 80px -12px inset, rgba(0, 0, 0, 0.3) 0px 78px 86px -18px inset;
+    transition: all 0.7s ease-in-out;
+  }
+  & .wallpaper:hover {
+    transform: scale(1.1);
+  }
+  & .right-Section {
+    width: 60vw;
+    height: 100vh;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
