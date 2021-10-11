@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Input from "../../components/Input";
+import Button from '../../components/Button'
 import "../../styles/auth/Login.scss";
 
 const Login: React.FC = () => {
@@ -16,7 +17,7 @@ const Login: React.FC = () => {
           </Typography>
           <Input label='Email' />
           <Input label='Password' />
-          <button>Submit</button>
+          <Button btnType="Primary" label="Login" onClick={()=> console.log("hello world")} />
         </div>
       </div>
     </div>
