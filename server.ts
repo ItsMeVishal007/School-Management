@@ -1,4 +1,5 @@
 import express from "express";
+import { ApolloServer } from 'apollo-server';
 import { connectDB } from "./db/Index";
 const app: any = express();
 
