@@ -1,15 +1,16 @@
 import express from "express";
 import { ApolloServer } from 'apollo-server';
+import dotenv from 'dotenv';
 import { connectDB } from "./db/Index";
+
+dotenv.config();
 const app: any = express();
 
 app.get("/", (req: any, res: any) => {
   res.json({ message: "hello world" });
 });
 
-connectDB(
-  "mongodb+srv://drcyberx:drcyberx@cluster0.yyra3.mongodb.net/MySchool?retryWrites=true&w=majority"
-)
+connectDB(`${process.env.MONGO_URI}`)
   .then((data) => {
     console.log(data);
     app.listen(4000, (): any => {
