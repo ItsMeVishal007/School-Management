@@ -1,12 +1,12 @@
 import React from "react";
 import Text from "../../components/Text";
 
-const Index: React.FC = () => {
+const About: React.FC = () => {
   return (
     <div>
-      <Text hType='h3' text='Home Page' />
+      <Text hType='h3' text='About Page' />
     </div>
   );
 };
 
-export default Index;
+export default About;
