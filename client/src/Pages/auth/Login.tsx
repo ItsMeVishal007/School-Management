@@ -1,5 +1,5 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
+import Text from '../../components/Text'
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import "../../styles/auth/Login.scss";
@@ -12,9 +12,10 @@ const Login: React.FC = () => {
       </div>
       <div className='right-Section'>
         <div className='login-container'>
-          <Typography variant='h3' component='div' gutterBottom>
-            Login
-          </Typography>
+        <Text
+          hType="h3"
+          text="Login"
+        />
           <Input
             onChange={(e: any) => console.log(e.target.value)}
             label='Email'
