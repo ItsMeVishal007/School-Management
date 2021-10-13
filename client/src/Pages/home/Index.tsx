@@ -1,19 +1,20 @@
-import React from 'react'
+import React from "react";
+import Text from "../../components/Text";
 import '../../styles/home/Home.scss'
-const Index = () => {
-    return (
-        <div className='homePage' >
-        <div className='container'>
-            <div className='navBar'>
+const Index: React.FC = () => {
+  return (
+    <div>
+      <Text hType='h3' text='Home Page' />
+      <div className='navBar'>
                 <div className='navBar_container'>
                     <div className='navBar_content'>
                         <h3>Logo</h3>
                     </div>
                     <div className='navBar_content'>
-                    <h3>Courses</h3>
+                    <h3>Home</h3>
                     </div>
                     <div className='navBar_content'>
-                    <h3>Logo</h3>
+                    <h3>Courses</h3>
                     </div>
                     <div className='navBar_content'>
                     <h3>Sports</h3>
@@ -26,10 +27,8 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-        </div>
-            
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default Index
+export default Index;
