@@ -1,7 +1,11 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-const SportsSchema = new Schema({
+interface Sport {
+  SportName: string;
+  SportId: string;
+}
+const SportsSchema = new Schema<Sport>({
   SportName: { type: String },
- SportId:{type:String}
+  SportId: { type: String },
 });
-module.exports = mongoose.model('SportsDetails',SportsSchema);
+module.exports = mongoose.model('SportsDetails', SportsSchema);

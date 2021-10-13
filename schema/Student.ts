@@ -1,6 +1,15 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-const StudentSchema = new Schema({
+interface Student {
+  Name: string;
+  Email: string;
+  Age: number;
+  ContactNumber: number;
+  Address: string;
+  ParentDetails: string;
+  RollNumber: string;
+}
+const StudentSchema = new Schema<Student>({
   Name: { type: String },
   Age: { type: Number },
   Email: { type: String, unique: true },
@@ -11,6 +20,6 @@ const StudentSchema = new Schema({
     FatherContactNumber: { type: Number, unique: true },
     MotherName: { type: String },
   },
-  RollNumber: { type: String,unique:true },
+  RollNumber: { type: String, unique: true },
 });
 module.exports = mongoose.model('StudentDetails', StudentSchema);

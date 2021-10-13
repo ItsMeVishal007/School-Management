@@ -1,6 +1,16 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-const StaffSchema = new Schema({
+interface Staff {
+  Name: string;
+  Email: string;
+  Age: number;
+  ContactNumber: number;
+  Address: string;
+
+  StaffId: string;
+  Role: string;
+}
+const StaffSchema = new Schema<Staff>({
   Name: { type: String },
   Age: { type: Number },
   Email: { type: String, unique: true },
@@ -8,12 +18,12 @@ const StaffSchema = new Schema({
   Address: { type: String },
   StaffId: { type: String, unique: true },
   Role: {
-    RoleName:{
+    RoleName: {
       type: String,
     },
-    RoleId:{
+    RoleId: {
       type: String,
-    }
+    },
   },
 });
 module.exports = mongoose.model('StaffDetails', StaffSchema);
