@@ -3,8 +3,8 @@ const typeDefs = gql`
 type Student{
 Name:String
 Email:String
-Age:Number
-ContactNumber:Number
+Age:Number`;
+ContactNumber: Number`
 Address:String
 ParentDetails:String
 RollNumber:String
@@ -12,5 +12,5 @@ RollNumber:String
 type Query{
 Students:[Student]
 }
-`
-module.exports = {typeDefs}
+`;
+module.exports = { typeDefs };
