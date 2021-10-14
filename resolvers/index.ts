@@ -10,7 +10,7 @@ const resolvers = {
   },
   Mutation: {
     CreateStudent: async (_parent: any, args: any) => {
-      const student = await StudentDetail.create(args)
+      const student = await StudentDetail.create(args);
       return student;
     },
   },
