@@ -16,7 +16,12 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
       width: 40%;
+      & .img {
+        height: 30px;
+        width: 30px;
+      }
       //   border: 2px solid rgb(8, 5, 5);
     }
     & .burgur-menu img {
@@ -32,8 +37,8 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      & .userIcon{
-          cursor: pointer;
+      & .userIcon {
+        cursor: pointer;
       }
     }
   }
