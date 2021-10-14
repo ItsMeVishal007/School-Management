@@ -1,16 +1,18 @@
 const { ApolloServer, gql } = require('apollo-server');
-const typeDefs = gql`
-type Student{
-Name:String
-Email:String
-Age:Number`;
-ContactNumber: Number`
-Address:String
-ParentDetails:String
-RollNumber:String
-}
-type Query{
-Students:[Student]
-}
+
+export const typeDefs = gql`
+  type Query {
+    Student: [Student]
+    hello: String
+  }
+  type Student {
+    Name: String
+    Email: String
+    Age: Int
+    ContactNumber: Int
+    Address: String
+    ParentDetails: String
+    RollNumber: String
+  }
+
 `;
-module.exports = { typeDefs };

@@ -1,15 +1,13 @@
-const StudentDetail = require('../schema/Student')
+import StudentDetail from '../schema/Student';
 
-const resolvers={
-  Query:{
-    Students:()=>{
-      return StudentDetail
+const resolvers = {
+  Query: {
+    hello : () => "hello",
+    Student: async (parent: any, args: any) => {
+      const Student = await StudentDetail.find();
+      return Student;
     },
-    Student:(parent: any,args: { id: any })=>{
-      const id = args.id
-const Student = StudentDetail.find(StudentDetail,{id:args.id})
-return Student
-    }
-  }
-}
-module.exports={resolvers}
+  },
+};
+
+export { resolvers };

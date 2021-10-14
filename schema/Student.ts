@@ -1,5 +1,4 @@
-import mongoose from 'mongoose';
-const { Schema } = mongoose;
+import { model, Schema } from 'mongoose';
 interface Student {
   Name: string;
   Email: string;
@@ -22,4 +21,4 @@ const StudentSchema = new Schema<Student>({
   },
   RollNumber: { type: String, unique: true },
 });
-module.exports = mongoose.model('StudentDetails', StudentSchema);
+export default model('StudentDetails', StudentSchema);
