@@ -5,7 +5,11 @@ interface Student {
   Age: number;
   ContactNumber: number;
   Address: string;
-  ParentDetails: string;
+  ParentDetails: {
+    FatherName: string;
+    MotherName: string;
+    FatherContactNumber: string;
+  };
   RollNumber: string;
 }
 const StudentSchema = new Schema<Student>({
@@ -16,7 +20,7 @@ const StudentSchema = new Schema<Student>({
   Address: { type: String },
   ParentDetails: {
     FatherName: { type: String },
-    FatherContactNumber: { type: Number, unique: true },
+    FatherContactNumber: { type: String, unique: true },
     MotherName: { type: String },
   },
   RollNumber: { type: String, unique: true },
