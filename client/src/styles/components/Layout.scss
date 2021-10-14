@@ -1,0 +1,40 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f6fa;
+  & .navbar {
+    color: whitesmoke;
+    background-color: #34495e;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    & .burgur-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 40%;
+      //   border: 2px solid rgb(8, 5, 5);
+    }
+    & .burgur-menu img {
+      filter: invert(1);
+      width: 40px;
+      height: 50px;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    & .left-menu {
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      & .userIcon{
+          cursor: pointer;
+      }
+    }
+  }
+}
