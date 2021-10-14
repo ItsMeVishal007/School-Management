@@ -16,16 +16,21 @@ app.get('/', (req: any, res: any) => {
 
 async function startApolloServer(typeDefs: any, resolvers: any) {
   const httpServer = http.createServer(app);
+
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],    
+    plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   });
+
   await server.start();
+
   server.applyMiddleware({ app });
+
   await new Promise((resolve: any) =>
     httpServer.listen({ port: 4000 }, resolve),
   );
+
   connectDB(`${process.env.MONGO_URI}`)
     .then(() => {
       console.log(
