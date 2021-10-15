@@ -11,7 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 5;
+    z-index: 1000;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
     & .burgur-menu {
       display: flex;
       flex-direction: row;
