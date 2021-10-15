@@ -1,11 +1,31 @@
 import React from 'react';
+import Crousel from '../../components/Crousel';
 import Text from '../../components/Text';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/home/Home.scss';
+
+const cData = [
+  {
+    title: 'Yash Birthday!',
+    detail: 'celebrating yash 44th birthday',
+    image: 'https://source.unsplash.com/2600x900/?forest,wildlife',
+  },
+  {
+    title: 'Vishal Birthday!',
+    detail: 'celebrating Vishal 44th birthday',
+    image: 'https://source.unsplash.com/2600x900/?forest,wildlife',
+  },
+  {
+    title: 'Pankaj sir Birthday!',
+    detail: 'celebrating Pankaj sir 44th birthday',
+    image: 'https://source.unsplash.com/2600x900/?forest,wildlife',
+  },
+];
 
 const Index: React.FC = () => {
   return (
     <div>
-      <Text hType="h3" text="Home Page" />
+      <Crousel crouselData={cData} />
     </div>
   );
 };
