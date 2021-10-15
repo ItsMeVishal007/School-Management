@@ -1,0 +1,19 @@
+.FXcard{
+    border: 2px solid red;
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    & img{
+        height: 200px;
+        width: 100%;
+    }
+    & .FXcardTitle{
+        width: 100%;
+        text-align: center;
+
+    }
+}
