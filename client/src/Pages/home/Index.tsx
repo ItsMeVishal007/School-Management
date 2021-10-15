@@ -1,6 +1,7 @@
 import React from 'react';
 import Crousel from '../../components/Crousel';
 import Text from '../../components/Text';
+import Card from '../../components/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/home/Home.scss';
 
@@ -26,6 +27,7 @@ const Index: React.FC = () => {
   return (
     <div>
       <Crousel crouselData={cData} />
+      <Card />
     </div>
   );
 };
