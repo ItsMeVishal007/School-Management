@@ -20,7 +20,7 @@ const Layout: React.FC<iLayout> = ({ children }) => {
           <img
             src={isSideBar ? cancel : Burgur}
             alt="burgur"
-            className={isSideBar && "img"}
+            className={isSideBar && 'img'}
             onClick={() => {
               setIsSideBar((previousData: boolean) => !previousData);
             }}
@@ -44,8 +44,8 @@ const Layout: React.FC<iLayout> = ({ children }) => {
       </div>
       <div>
         <SideBar />
+        {children}
       </div>
-      {children}
     </div>
   );
 };

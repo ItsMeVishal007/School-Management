@@ -4,7 +4,7 @@ import { AllRoutes } from './routes/Index';
 import Layout from './components/Layout';
 import './App.css';
 
-const App: React.FC = (): any => {
+const App: React.FC<{}> = (): any => {
   return (
     <Router>
       <Switch>
