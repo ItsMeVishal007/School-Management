@@ -1,19 +1,33 @@
-.FXcard{
-    border: 2px solid red;
-    height: 500px;
-    width: 400px;
-    overflow: hidden;
+.FXcard {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  background: #fff;
+  height: 420px;
+  width: 300px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  & img {
+    height: 180px;
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+  }
+  & .FXcardTitle {
+    padding: 10px;
+    width: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center ;
-    & img{
-        height: 200px;
-        width: 100%;
-    }
-    & .FXcardTitle{
-        width: 100%;
-        text-align: center;
-
-    }
+    justify-content: space-around;
+    text-align: center;
+  }
+}
+.FXcard:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  transform: scale(1.02);
 }
