@@ -44,7 +44,7 @@ const Layout: React.FC<iLayout> = ({ children }) => {
       </div>
       <div>
         <SideBar />
-        {children}
+        <div style={{ padding: '25px', paddingRight: '35px' }}>{children}</div>
       </div>
     </div>
   );

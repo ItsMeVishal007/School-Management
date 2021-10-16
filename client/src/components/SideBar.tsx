@@ -8,14 +8,14 @@ const SideBar: React.FC = () => {
   return (
     <div
       className="sidebar"
-      style={{ width: isSideBar ? '300px' : '0px', overflow: 'hidden' }}
+      style={{ height: isSideBar ? '80px' : '0px', overflow: 'hidden', alignItems:'center' }}
     >
       <div className="links">
-        <Text hType="h5" text="Home" />
-        <Text hType="h5" text="Project" />
-        <Text hType="h5" text="Employees" />
-        <Text hType="h5" text="My Report" />
-        <Text hType="h5" text="Support" />
+        <Text hType="h6" text="Home" />
+        <Text hType="h6" text="Project" />
+        <Text hType="h6" text="Employees" />
+        <Text hType="h6" text="My Report" />
+        <Text hType="h6" text="Support" />
       </div>
     </div>
   );
