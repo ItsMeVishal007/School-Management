@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   // border : 2px solid black;
+  margin: 0px;
+  padding: 0px;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -10,6 +12,7 @@
     width: 55vw;
     height: 100vh;
     overflow: hidden;
+    flex: 4;
   }
   & .wallpaper {
     height: 100%;
@@ -25,6 +28,8 @@
     transform: scale(1.1);
   }
   & .right-Section {
+    flex:2;
+    margin-left: 8rem;
     width: 60vw;
     height: 100vh;
     display: flex;
