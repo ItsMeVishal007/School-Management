@@ -19,7 +19,7 @@ const MainBtn: React.FunctionComponent<ButtonInterface> = ({
     <Button
       variant={btnType === 'Primary' ? 'contained' : 'outlined'}
       style={{
-        backgroundColor: btnType === 'Primary' ? '#699268' : '#f5f6fa00',
+        backgroundColor: btnType === 'Primary' ? '#34495e' : '#f5f6fa00',
         fontSize: '1rem',
         color:'white',
         ...style
