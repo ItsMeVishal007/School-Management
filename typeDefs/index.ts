@@ -7,18 +7,18 @@ export const typeDefs = gql`
   }
 
   type Client {
-    ClientName: string!
-    ClientEmail: string!
-    ClientAddress: string!
-    ClientPhoneNumber: string!
+    ClientName: String!
+    ClientEmail: String!
+    ClientAddress: String!
+    ClientPhoneNumber: String!
   }
 
   type Mutation {
     CreateClient(
-    ClientName: string!
-    ClientEmail: string!
-    ClientAddress: string!
-    ClientPhoneNumber: string!
+      ClientName: String!
+      ClientEmail: String!
+      ClientAddress: String!
+      ClientPhoneNumber: String!
     ): Client!
   }
 `;
