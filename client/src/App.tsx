@@ -12,7 +12,7 @@ const App: React.FC<{}> = (): any => {
         <Route path='/login' component={Login} />
         <Layout>
           {AllRoutes.map<React.ReactElement>(({ path, component }) => (
-            <Route path={path} component={component} />
+            <Route exact path={path} component={component} />
           ))}
         </Layout>
       </Switch>

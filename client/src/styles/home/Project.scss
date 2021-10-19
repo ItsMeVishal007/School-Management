@@ -1,0 +1,114 @@
+.project_container{
+  margin: 90px 0;
+  display: flex;
+}
+
+.Box_Search {
+  position: absolute;
+  top : 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  
+}
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  transition: 0.4s;
+  // line-height: 40px;
+  width: 0px;
+  
+  
+}
+.Box_Search:hover > .search-text{
+  width: 240px;
+  padding: 0 6px ;
+}
+
+.Box_Search:hover > .search-btn{
+  // background: white;
+  color: white;
+
+ 
+  
+}
+
+.search-btn {
+  color: #e84118;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+   padding-bottom: 5px;
+}
+.project_body{
+  position: absolute;
+  top:32%;
+  width: 100vw;
+}
+.body_card{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin :8px 0;
+}
+.card_content{
+  display: flex;
+  flex-direction: row;
+  width:70%;
+ min-height: 90px;
+ box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+justify-content: space-between;
+}
+
+.content_left{
+margin: 15px;
+
+
+}
+.content_left span{
+color: rgb(93, 93, 148);
+}
+.content_right{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 22px 0 0;
+  cursor: pointer;
+
+}
+.content_right span{
+  margin: 5px;
+}
+.add_project{
+      /* align-items: center; */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      // background-color: #c5c3b28a;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 90%;
+      align-items: center;
+}
+.add_project span{
+
+  cursor: pointer;
+}
