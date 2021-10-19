@@ -9,7 +9,7 @@ const App: React.FC<{}> = (): any => {
   return (
     <Router>
       <Switch>
-        <Route path={'/login'} component={Login} />
+        <Route path='/login' component={Login} />
         <Layout>
           {AllRoutes.map<React.ReactElement>(({ path, component }) => (
             <Route path={path} component={component} />
