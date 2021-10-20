@@ -1,42 +1,44 @@
 import { ApolloServer, gql } from 'apollo-server';
+import { DocumentNode } from 'graphql';
 
-export const typeDefs = gql`
+export const typeDefs: DocumentNode = gql`
   type Query {
-    Student: [Student]
+    Client: [Client]
     hello: String
+    Projects: [Project]
   }
 
-  type parents {
-    FatherName: String
-    MotherName: String
-    FatherContactNumber: String
+  type Project {
+    ProjectName: String
+    ProjectStartDate: String
+    ProjectOwner: String
   }
 
-  type Student {
-    Name: String
-    Email: String
-    Age: Int
-    ContactNumber: String
-    ParentDetails: parents
-    Address: String
-    RollNumber: String
+  input project {
+    id: ID!
   }
 
-  input parentsDetail {
-    FatherName: String
-    MotherName: String
-    FatherContactNumber: String
+  type Client {
+    ClientName: String
+    ClientEmail: String
+    ClientAddress: String
+    ClientPhoneNumber: String
+    Projects: [Project]
   }
 
   type Mutation {
-    CreateStudent(
-      Name: String!
-      Email: String!
-      Age: Int!
-      ContactNumber: String!
-      ParentDetails: parentsDetail!
-      Address: String
-      RollNumber: String!
-    ): Student!
+    createClient(
+      ClientName: String!
+      ClientEmail: String!
+      ClientPhoneNumber: String!
+      ClientAddress: String!
+      Projects: [project]
+    ): Client!
+
+    createProject(
+      ProjectName: String!
+      ProjectStartDate: String!
+      ProjectOwner: String
+    ): Project
   }
 `;

@@ -11,7 +11,7 @@ const Input: React.FC<InputInterface> = ({ label, onChange }) => {
     <TextField
       id='outlined-basic'
       label={label}
-      variant='outlined'
+      variant='standard'
       onChange={onChange}
     />
   );

@@ -1,6 +1,2 @@
 **/node_modules/*
-**/out/*
 **/.build/*
-**/__generated__/*
-**/lib/*.d.ts
-**/lib/
