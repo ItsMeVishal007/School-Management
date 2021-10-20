@@ -19,7 +19,7 @@ const Client = new Schema<iClient>({
   ClientPhoneNumber: { type: String },
   Projects: [
     {
-      type: mongoose.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: 'Project',
     },
   ],
