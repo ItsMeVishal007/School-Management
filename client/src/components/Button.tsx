@@ -13,7 +13,7 @@ const MainBtn: React.FunctionComponent<ButtonInterface> = ({
   btnType,
   label,
   onClick,
-  style
+  style,
 }) => {
   return (
     <Button
@@ -21,8 +21,8 @@ const MainBtn: React.FunctionComponent<ButtonInterface> = ({
       style={{
         backgroundColor: btnType === 'Primary' ? '#699268' : '#f5f6fa00',
         fontSize: '1rem',
-        color:'white',
-        ...style
+        color: 'white',
+        ...style,
       }}
       size="medium"
       onClick={onClick}
